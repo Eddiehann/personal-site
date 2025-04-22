@@ -2,8 +2,10 @@ import React from 'react'
 
 const projects = () => {
   return (
-    <div>projects</div>
-  )
+    <div className="container">
+      This is Projects page
+    </div>
+)
 }
 
 export default projects
