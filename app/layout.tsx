@@ -12,26 +12,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <div className="flex items-center justify-center py-8">
+        <div className="flex items-center justify-center py-8 font-sans">
           <div className="
-            grid grid-rows-[32px_1fr_32px]
-            max-w-screen-md w-full min-h-[calc(100vh-4rem)] 
-            bg-gray-950 rounded-2xl gap-4 p-8 
-            divide-y-2 divide-gray-600
-            font-bold text-gray-600 text-sm">
+            grid grid-rows-[auto_1fr_auto] w-full min-h-[calc(100vh-4rem)]
+            bg-gray-950 rounded-2xl gap-8 px-8 
+            font-semibold text-gray-300 text-base">
               
               <header className="
-                row-start-1 flex flex-row items-center pb-[6px]">
+                row-start-1 flex flex-row items-center">
                 <Navbar />
               </header>
 
-              <main className ="
-                row-start-2 justify-self-start w-full text-gray-300">
+              <main className="
+                max-w-screen-sm flex w-full mx-auto justify-center items-start row-start-2 text-gray-400">
                   {children}
               </main>
 
               <footer className="
-                row-start-3 flex flex-row items-center svg">
+                max-w-screen-sm w-full mx-auto justify-start row-start-3">
+                <div className="text-lg/8 font-light text-gray-400">
+                  Find me on:
+                </div>
                 <Footer />
               </footer>
           </div>  
