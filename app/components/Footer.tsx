@@ -1,14 +1,13 @@
 import Image from "next/image";
 
-const FooterLayout = `
-        flex items-center 
-        gap-2 hover:underline hover:underline-offset-4
-        h-10 px-4 w-auto
-        font-bold text-sm`;
-
 const Footer = () => {
+
+  const FooterLayout = `
+        flex items-center
+        gap-2 h-10 px-4 w-auto`;
+  
   return (
-      <footer className="flex gap-4 items-center">
+      <footer className="flex items-center">
           <a
             className={FooterLayout}
             href="https://github.com/eddiehann"
@@ -21,7 +20,11 @@ const Footer = () => {
               width={16}
               height={16}
             />
-            GitHub
+            <div className="
+              transition duration-200 ease-in-out 
+              hover:translate-x-1 hover:text-gray-300">
+              GitHub
+            </div>
           </a>
           <a
             className={FooterLayout}
@@ -35,7 +38,11 @@ const Footer = () => {
               width={16}
               height={16}
             />
-            Source Code
+            <div className="
+              transition duration-200 ease-in-out 
+              hover:translate-x-1 hover:text-gray-300">
+              Source Code
+            </div>
           </a>
         </footer>
   );
