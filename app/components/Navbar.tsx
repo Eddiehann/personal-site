@@ -14,7 +14,7 @@ const Navbar = () => {
   const TextLayout = `
     flex items-center h-10 
     transition duration-200 ease-in-out
-    hover:text-gray-300 hover:-translate-y-1`;
+    hover:text-gray-100 hover:-translate-y-1`;
 
   const isActive = (path: string) => 
     pathname === path ? "underline underline-offset-5 text-gray-300" : "no-underline";
@@ -38,18 +38,18 @@ const Navbar = () => {
       
       <div className = "flex gap-6">  
         <Link
-          href="/experience"
-          className={`${NavBarLayout} ${isActive("/experience")}`}>
-          <div className={TextLayout}>
-            Experiences
-          </div>
-        </Link>
-        
-        <Link
           href="/project"
           className={`${NavBarLayout} ${isActive("/project")}`}>
           <div className={TextLayout}>
             Projects
+          </div>
+        </Link>
+
+        <Link
+          href="/experience"
+          className={`${NavBarLayout} ${isActive("/experience")}`}>
+          <div className={TextLayout}>
+            Experiences
           </div>
         </Link>
 
