@@ -19,12 +19,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             font-semibold text-gray-300 text-base">
               
               <header className="
-                row-start-1 flex flex-row items-center">
+                row-start-1 flex transition items-center fade-down">
                 <Navbar />
               </header>
 
               <main className="
-                max-w-screen-sm flex w-full mx-auto justify-center items-start row-start-2 text-gray-400">
+                row-start-2 max-w-screen-sm flex w-full mx-auto justify-center items-start fade-up text-gray-400">
                   {children}
               </main>
 
