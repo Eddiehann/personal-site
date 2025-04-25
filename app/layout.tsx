@@ -12,11 +12,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <div className="flex items-center justify-center py-6 font-sans">
           <div className="
             grid grid-rows-[auto_1fr_auto] w-full min-h-[calc(100vh-4rem)]
             bg-gray-950 rounded-2xl gap-8 px-12 
-            font-semibold text-gray-300 text-base">
+            font-semibold text-gray-300 text-base/7 sm:text-[17px]/8">
               
               <header className="
                 row-start-1 flex transition items-center fade-down">
@@ -30,7 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
               <footer className="
                 max-w-screen-sm w-full mx-auto justify-start row-start-3">
-                <div className="text-lg/8 font-light text-gray-400">
+                <div className="font-light text-gray-400">
                   Find me through:
                 </div>
                 <Footer />

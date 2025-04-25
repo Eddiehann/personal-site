@@ -62,7 +62,7 @@ const Navbar = () => {
         </Link>
 
         <a
-          className={NavBarLayout}
+          className={`${NavBarLayout} ${`hidden sm:block`}`}
           href="https://github.com/eddiehann"
           target="_blank"
           rel="noopener noreferrer"
@@ -82,7 +82,7 @@ const Navbar = () => {
         </a>
 
         <a
-          className={NavBarLayout}
+          className={`${NavBarLayout} ${`hidden sm:block`}`}
           href="https://www.linkedin.com/in/eddiehann/"
           target="_blank"
           rel="noopener noreferrer"

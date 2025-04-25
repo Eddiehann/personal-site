@@ -65,22 +65,24 @@ const Footer = () => {
         </a>
       </div>
 
-      <a
-        className={FooterLayout}
-        href="https://github.com/Eddiehann/personal-site"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          src="/code-wrap.svg"
-          alt="code wrap icon"
-          width={16}
-          height={16}
-        />
-        <div className={TextLayout}>
-          Source
-        </div>
-      </a>
+      <div className="hidden sm:block">
+        <a
+          className={FooterLayout}
+          href="https://github.com/Eddiehann/personal-site"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/code-wrap.svg"
+            alt="code wrap icon"
+            width={16}
+            height={16}
+          />
+          <div className={TextLayout}>
+            Source
+          </div>
+        </a>
+      </div>
     </footer>
   );
 };
