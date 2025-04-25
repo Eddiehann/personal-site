@@ -20,7 +20,7 @@ const Navbar = () => {
     pathname === path ? "underline underline-offset-5 text-gray-300" : "no-underline";
 
   return ( 
-    <nav className="flex justify-between w-full h-10 fade-down">
+    <nav className="flex justify-between w-full h-10">
       <Link
         href="/"
         className={`${NavBarLayout} ${isActive("/")}`}>

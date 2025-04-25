@@ -66,11 +66,10 @@ body {
   opacity: 0;
 }
 
-.fade-up section:nth-child(1) {animation-delay: 0s;}
-.fade-up section:nth-child(2) {animation-delay: 0.1s;}
-.fade-up section:nth-child(3) {animation-delay: 0.2s;}
-.fade-up section:nth-child(4) {animation-delay: 0.3s;}
-.fade-up section:nth-child(5) {animation-delay: 0.4s;}
+.fade-up section:nth-of-type(1) {animation-delay: 0s;}
+.fade-up section:nth-of-type(2) {animation-delay: 0.1s;}
+.fade-up section:nth-of-type(3) {animation-delay: 0.2s;}
+.fade-up section:nth-of-type(4) {animation-delay: 0.3s;}
 
 /* text wave animation */
 .text-wave:hover span {

@@ -26,11 +26,11 @@ export default function Home() {
       </div>
 
       <section className="text-[17px]/8 font-normal">
-        Hey! I'm Eddie, a second-year computer science student at UBC.
+        Hey! I&apos;m Eddie, a second-year computer science student at UBC.
       </section>
 
       <section className={TextLayout}>
-        I'm drawn to projects that blend logic with design — whether it's building interactive user interfaces or prototyping game ideas. 
+        I&apos;m drawn to projects that blend logic with design — whether it&apos;s building interactive user interfaces or prototyping game ideas. 
         I enjoy exploring how code can serve as a medium for artistic expression. You can find 
         my <a href="/project" className={LinkLayout}>full projects list</a> here.
       </section>
