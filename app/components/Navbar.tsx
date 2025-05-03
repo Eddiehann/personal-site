@@ -7,11 +7,11 @@ import { usePathname } from 'next/navigation'
 const Navbar = () => {
   const pathname = usePathname();
 
-  const NavBarLayout = `
+  const navBarLayout = `
     flex items-center
     h-10 w-auto`;
 
-  const TextLayout = `
+  const textLayout = `
     flex items-center h-10 
     transition duration-200 ease-in-out
     hover:text-gray-100 hover:-translate-y-1`;
@@ -23,8 +23,8 @@ const Navbar = () => {
     <nav className="flex justify-between w-full h-10">
       <Link
         href="/"
-        className={`${NavBarLayout} ${isActive("/")}`}>
-        <svg height="18" width="18" viewBox="0 0 16 16" className={`${TextLayout} ${`color:currentcolor`}`}>
+        className={`${navBarLayout} ${isActive("/")}`}>
+        <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${`color:currentcolor`}`}>
           <path d="M12.5 6.56062L8.00001 2.06062L3.50001 6.56062V13.5L6.00001 13.5V11C6.00001 9.89539 6.89544 
           8.99996 8.00001 8.99996C9.10458 8.99996 10 9.89539 10 11V13.5L12.5 13.5V6.56062ZM13.78 5.71933L8.70711 
           0.646409C8.31659 0.255886 7.68342 0.255883 7.2929 0.646409L2.21987 5.71944C2.21974 5.71957 2.21961 
@@ -38,36 +38,36 @@ const Navbar = () => {
       
       <div className = "flex gap-6">  
         <Link
-          href="/project"
-          className={`${NavBarLayout} ${isActive("/project")}`}>
-          <div className={TextLayout}>
+          href="/projects"
+          className={`${navBarLayout} ${isActive("/projects")}`}>
+          <div className={textLayout}>
             Projects
           </div>
         </Link>
 
         <Link
-          href="/experience"
-          className={`${NavBarLayout} ${isActive("/experience")}`}>
-          <div className={TextLayout}>
+          href="/experiences"
+          className={`${navBarLayout} ${isActive("/experiences")}`}>
+          <div className={textLayout}>
             Experiences
           </div>
         </Link>
 
         <Link
           href="/gallery"
-          className={`${NavBarLayout} ${isActive("/gallery")}`}>
-          <div className={TextLayout}>
+          className={`${navBarLayout} ${isActive("/gallery")}`}>
+          <div className={textLayout}>
             Gallery
           </div>
         </Link>
 
         <a
-          className={`${NavBarLayout} ${`hidden sm:block`}`}
+          className={`${navBarLayout} ${`hidden sm:block`}`}
           href="https://github.com/eddiehann"
           target="_blank"
           rel="noopener noreferrer"
           >
-          <svg height="18" width="18" viewBox="0 0 16 16" className={`${TextLayout} ${`color:currentcolor`}`}>
+          <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${`color:currentcolor`}`}>
             <path d="M8 0C3.58 0 0 3.57879 0 7.99729C0 11.5361 2.29 14.5251 5.47 15.5847C5.87 15.6547 6.02 15.4148 6.02 
             15.2049C6.02 15.0149 6.01 14.3851 6.01 13.7154C4 14.0852 3.48 13.2255 3.32 12.7757C3.23 12.5458 2.84 11.836 
             2.5 11.6461C2.22 11.4961 1.82 11.1262 2.49 11.1162C3.12 11.1062 3.57 11.696 3.72 11.936C4.44 13.1455 5.59 
@@ -82,12 +82,12 @@ const Navbar = () => {
         </a>
 
         <a
-          className={`${NavBarLayout} ${`hidden sm:block`}`}
+          className={`${navBarLayout} ${`hidden sm:block`}`}
           href="https://www.linkedin.com/in/eddiehann/"
           target="_blank"
           rel="noopener noreferrer"
           >
-          <svg height="18" width="18" viewBox="0 0 16 16" className={`${TextLayout} ${`color:currentcolor`}`}>
+          <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${`color:currentcolor`}`}>
             <path d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 
             0.895431 15.1046 0 14 0H2ZM5 6.75V13H3V6.75H5ZM5 4.50008C5 5.05554 4.61409 5.5 3.99408 5.5H3.98249C3.38582 
             5.5 3 5.05554 3 4.50008C3 3.93213 3.39765 3.5 4.00584 3.5C4.61409 3.5 4.98845 3.93213 5 4.50008ZM8.5 
