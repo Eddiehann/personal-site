@@ -5,7 +5,7 @@ export default function Home() {
   const linkLayout=`
     font-semibold text-gray-300
     transition duration-200 ease-in-out 
-    hover:text-gray-100`;
+    hover:text-gray-100 hover:underline underline-offset-2`;
 
   return (
     <div className="grid gap-6 py-2">
@@ -33,12 +33,12 @@ export default function Home() {
         <section>
           I&apos;m drawn to projects that blend logic with design — whether it&apos;s building interactive user interfaces or prototyping game ideas. 
           I enjoy exploring how code can serve as a medium for artistic expression. You can find 
-          my <a href="/project" className={linkLayout}>full projects list</a> here.
+          my <a href="/projects" className={linkLayout}>full projects list</a> here.
         </section>
     
         <section>
           Professionally, I have worked on UI prototyping and experimented with AI-powered tools in industry settings. You can learn more about
-          those <a href="/experience" className={linkLayout}>experiences</a> here.
+          those <a href="/experiences" className={linkLayout}>experiences</a> here.
         </section>
 
         <section>
