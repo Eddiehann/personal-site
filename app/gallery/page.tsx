@@ -13,11 +13,11 @@ const gallery = () => {
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="relative aspect-square overflow-hidden">
             <Image
-                src="/art/eagle.gif"
+                src="/art/landscape.png"
                 alt="image"
                 fill
                 unoptimized
-                className="object-cover image-pixel"
+                className="object-cover object-right image-pixel"
               />
           </div>
           <div className="relative aspect-square overflow-hidden">
@@ -26,28 +26,7 @@ const gallery = () => {
                 alt="image"
                 fill
                 unoptimized
-                className="object-cover image-pixel"
-              />
-          </div>
-        </section>
-        
-        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="relative aspect-square overflow-hidden">
-            <Image
-                src="/art/landscape.png"
-                alt="image"
-                fill
-                unoptimized
-                className="object-cover image-pixel"
-              />
-          </div>
-          <div className="relative aspect-square overflow-hidden">
-            <Image
-                src="/art/village.png"
-                alt="image"
-                fill
-                unoptimized
-                className="object-cover image-pixel"
+                className="object-cover object-right image-pixel"
               />
           </div>
         </section>
@@ -56,6 +35,27 @@ const gallery = () => {
           <div className="relative aspect-square overflow-hidden">
             <Image
                 src="/art/steven.png"
+                alt="image"
+                fill
+                unoptimized
+                className="object-cover image-pixel"
+              />
+          </div>
+          <div className="relative aspect-square overflow-hidden">
+            <Image
+                src="/art/eagle.gif"
+                alt="image"
+                fill
+                unoptimized
+                className="object-cover image-pixel"
+              />
+          </div>
+        </section>
+        
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="relative aspect-square overflow-hidden">
+            <Image
+                src="/art/PAD.png"
                 alt="image"
                 fill
                 unoptimized
@@ -76,11 +76,11 @@ const gallery = () => {
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="relative aspect-square overflow-hidden">
             <Image
-                src="/art/PAD.png"
+                src="/art/village.png"
                 alt="image"
                 fill
                 unoptimized
-                className="object-cover image-pixel"
+                className="object-cover object-top image-pixel"
               />
           </div>
           <div className="relative aspect-square overflow-hidden">
