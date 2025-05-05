@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
-const gallery = () => {
+export default function Gallery() {
   return (
     <div className="grid gap-4 py-2 font-normal">
 
@@ -97,5 +97,3 @@ const gallery = () => {
     </div> 
   )
 }
-
-export default gallery

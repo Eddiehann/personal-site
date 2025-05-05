@@ -4,7 +4,6 @@ export default function Home() {
 
   const linkLayout=`
     font-semibold text-gray-300
-    transition duration-200 ease-in-out 
     hover:text-gray-100 hover:underline underline-offset-2`;
 
   return (

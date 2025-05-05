@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
-const experiences = () => {
+export default function Experiences() {
 
   const sectionLayout=`
     grid gap-1 px-3
@@ -43,18 +43,9 @@ const experiences = () => {
           </div>
         </a>
 
-        {/* <div className="hidden sm:block">
-          <Image
-            src="/VOC.png"
-            alt="VOC Dashboard"
-            width={720}
-            height={512}
-          />
-        </div> */}
+       
       </section>
 
     </div> 
   )
 }
-
-export default experiences

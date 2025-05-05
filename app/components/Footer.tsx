@@ -11,7 +11,7 @@ const Footer = () => {
     hover:translate-x-1 hover:text-gray-300`;
   
   return (
-    <footer className="flex justify-between w-full items-center pb-20 text-gray-400">
+    <section className="flex justify-between w-full items-center pb-20 text-gray-400">
       <div className="flex"> 
         <a
           className={FooterLayout}
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
         </a>
       </div>
-    </footer>
+    </section>
   );
 };
 
