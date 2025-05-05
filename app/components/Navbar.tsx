@@ -68,21 +68,19 @@ export default function Navbar() {
         </div>
         
         {hiddenButton && (
-          <div className="flex gap-2 transition ease-in-out fade-right">
+          <div className="flex gap-2 transition ease-in-out fade-righ">
             <input 
               type="password" 
               id="password" 
               value={password}
               className="text-sm rounded-lg w-30 p-3 h-10
                 bg-gray-800 placeholder-gray-400
-                focus:outline-none" 
+                focus:outline-none hidden sm:block" 
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
               onKeyDown={handleKeyDown}/>
           </div>
-
         )}
-
       </div>
 
       <div className = "flex gap-6">  
