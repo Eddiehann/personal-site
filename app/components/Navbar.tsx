@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -19,23 +20,71 @@ export default function Navbar() {
   const isActive = (path: string) => 
     pathname === path ? "underline underline-offset-5 text-gray-300" : "no-underline";
 
+  const [hiddenButton, setHiddenButton] = useState(false); {/* -1 is not clicked */}
+  const [password, setPassword] = useState(''); {/* default to empty */}
+  const router = useRouter();
+  const correctPassword = 'rachel';
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      if (password === correctPassword) {
+        router.push('/hidden');
+      }
+    }
+  };
+
   return ( 
     <nav className="flex justify-between w-full h-10">
-      <Link
-        href="/"
-        className={`${navBarLayout} ${isActive("/")}`}>
-        <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${`color:currentcolor`}`}>
-          <path d="M12.5 6.56062L8.00001 2.06062L3.50001 6.56062V13.5L6.00001 13.5V11C6.00001 9.89539 6.89544 
-          8.99996 8.00001 8.99996C9.10458 8.99996 10 9.89539 10 11V13.5L12.5 13.5V6.56062ZM13.78 5.71933L8.70711 
-          0.646409C8.31659 0.255886 7.68342 0.255883 7.2929 0.646409L2.21987 5.71944C2.21974 5.71957 2.21961 
-          5.7197 2.21949 5.71982L0.469676 7.46963L-0.0606537 7.99996L1.00001 9.06062L1.53034 8.53029L2.00001 
-          8.06062V14.25V15H2.75001L6.00001 15H7.50001H8.50001H10L13.25 15H14V14.25V8.06062L14.4697 8.53029L15 
-          9.06062L16.0607 7.99996L15.5303 7.46963L13.7806 5.71993C13.7804 5.71973 13.7802 5.71953 13.78 
-          5.71933ZM8.50001 11V13.5H7.50001V11C7.50001 10.7238 7.72386 10.5 8.00001 10.5C8.27615 10.5 8.50001 
-          10.7238 8.50001 11Z" fill="currentColor"></path>
-        </svg>
-      </Link>
       
+      <div className = "flex gap-6">  
+        <Link
+          href="/"
+          className={navBarLayout}>
+          <svg height="18" width="18" viewBox="0 0 16 16" className={textLayout}>
+            <path d="M12.5 6.56062L8.00001 2.06062L3.50001 6.56062V13.5L6.00001 13.5V11C6.00001 9.89539 6.89544 
+            8.99996 8.00001 8.99996C9.10458 8.99996 10 9.89539 10 11V13.5L12.5 13.5V6.56062ZM13.78 5.71933L8.70711 
+            0.646409C8.31659 0.255886 7.68342 0.255883 7.2929 0.646409L2.21987 5.71944C2.21974 5.71957 2.21961 
+            5.7197 2.21949 5.71982L0.469676 7.46963L-0.0606537 7.99996L1.00001 9.06062L1.53034 8.53029L2.00001 
+            8.06062V14.25V15H2.75001L6.00001 15H7.50001H8.50001H10L13.25 15H14V14.25V8.06062L14.4697 8.53029L15 
+            9.06062L16.0607 7.99996L15.5303 7.46963L13.7806 5.71993C13.7804 5.71973 13.7802 5.71953 13.78 
+            5.71933ZM8.50001 11V13.5H7.50001V11C7.50001 10.7238 7.72386 10.5 8.00001 10.5C8.27615 10.5 8.50001 
+            10.7238 8.50001 11Z" fill="currentColor"></path>
+          </svg>
+        </Link>
+
+        <div 
+          className={`${navBarLayout} hidden sm:block`} 
+          onClick={() => setHiddenButton(hiddenButton ? false : true)}>
+          <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${hiddenButton ? '' : 'text-transparent'}`}>
+            <path d="M6.5 5.5C6.5 3.29086 8.29086 1.5 10.5 1.5C12.7091 1.5 14.5 3.29086 14.5 5.5C14.5 7.70914 
+            12.7091 9.5 10.5 9.5C10.0496 9.5 9.61798 9.42583 9.21589 9.28964L9.09885 
+            9.25H8.97528H8H7.25V10V12.25H5.75H5V13V14.5H1.5V11.5818L6.38022 7.14521L6.70674 6.84837L6.60585 
+            6.41878C6.53673 6.12449 6.5 5.81702 6.5 5.5ZM10.5 0C7.46243 0 5 2.46243 5 5.5C5 5.77753 5.02062 6.05064 5.06048 
+            6.31778L0.245495 10.695L0 10.9182V11.25V15.25V16H0.75H5.75H6.5V15.25V13.75H8H8.75V13V10.75H8.85639C9.37626  
+            10.9126 9.92859 11 10.5 11C13.5376 11 16 8.53757 16 5.5C16 2.46243 13.5376 0 10.5 0ZM10.5 6.5C11.0523 6.5 
+            11.5 6.05228 11.5 5.5C11.5 4.94772 11.0523 4.5 10.5 4.5C9.94771 4.5 9.5 4.94772 9.5 5.5C9.5 6.05228 9.94771 
+            6.5 10.5 6.5Z" fill="currentColor"></path>
+          </svg>
+        </div>
+        
+        {hiddenButton && (
+          <div className="flex gap-2 transition ease-in-out fade-right">
+            <input 
+              type="password" 
+              id="password" 
+              value={password}
+              className="text-sm rounded-lg w-30 p-3 h-10
+                bg-gray-800 placeholder-gray-400
+                focus:outline-none" 
+              placeholder="password"
+              onChange={(e) => setPassword(e.target.value)}
+              onKeyDown={handleKeyDown}/>
+          </div>
+
+        )}
+
+      </div>
+
       <div className = "flex gap-6">  
         <Link
           href="/projects"
@@ -62,12 +111,12 @@ export default function Navbar() {
         </Link>
 
         <a
-          className={`${navBarLayout} ${`hidden sm:block`}`}
+          className={`${navBarLayout} hidden sm:block`}
           href="https://github.com/eddiehann"
           target="_blank"
           rel="noopener noreferrer"
           >
-          <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${`color:currentcolor`}`}>
+          <svg height="18" width="18" viewBox="0 0 16 16" className={textLayout}>
             <path d="M8 0C3.58 0 0 3.57879 0 7.99729C0 11.5361 2.29 14.5251 5.47 15.5847C5.87 15.6547 6.02 15.4148 6.02 
             15.2049C6.02 15.0149 6.01 14.3851 6.01 13.7154C4 14.0852 3.48 13.2255 3.32 12.7757C3.23 12.5458 2.84 11.836 
             2.5 11.6461C2.22 11.4961 1.82 11.1262 2.49 11.1162C3.12 11.1062 3.57 11.696 3.72 11.936C4.44 13.1455 5.59 
@@ -82,12 +131,12 @@ export default function Navbar() {
         </a>
 
         <a
-          className={`${navBarLayout} ${`hidden sm:block`}`}
+          className={`${navBarLayout} hidden sm:block`}
           href="https://www.linkedin.com/in/eddiehann/"
           target="_blank"
           rel="noopener noreferrer"
           >
-          <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${`color:currentcolor`}`}>
+          <svg height="18" width="18" viewBox="0 0 16 16" className={textLayout}>
             <path d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 
             0.895431 15.1046 0 14 0H2ZM5 6.75V13H3V6.75H5ZM5 4.50008C5 5.05554 4.61409 5.5 3.99408 5.5H3.98249C3.38582 
             5.5 3 5.05554 3 4.50008C3 3.93213 3.39765 3.5 4.00584 3.5C4.61409 3.5 4.98845 3.93213 5 4.50008ZM8.5 

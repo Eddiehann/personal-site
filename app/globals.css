@@ -54,6 +54,17 @@ body {
   }
 }
 
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(-8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* fade down animation */
 .fade-down nav {
   animation: down 0.5s ease-in-out forwards;
@@ -63,6 +74,12 @@ body {
 /* fade up animation */
 .fade-up section {
   animation: up 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* fade right animation */
+.fade-right {
+  animation: right 0.5s ease-in-out forwards;
   opacity: 0;
 }
 

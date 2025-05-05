@@ -50,9 +50,9 @@ export default function Gallery() {
       </div>
 
       {/* fullscreen overlay */}
-      { selectedImg !== -1 && (
+      {selectedImg !== -1 && (
         <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center"
+          className="fixed inset-0 z-10 bg-black/80 flex items-center justify-center"
           onClick={() => setSelectedImg(-1)}> {/* set to -1 if already selected */}
           <div className="relative sm:w-[70vw] sm:h-[70vh] w-full h-full ">
             <Image
