@@ -6,36 +6,35 @@ import { useState } from 'react';
 const projects = [
   {
     date: 'May 2025',
-    title: 'Personal Site',
+    title: 'Personal Portfolio',
     skill: 'TypeScript, Next.js',
-    desc: 'Full-stack Personal Portfolio',
+    desc: 'Front-End Personal Portfolio',
     detail: [
-      "- Full-stack portfolio written in TypeScript using Next.js framework and deployed with Vercel",
-      "- Styled interactive components with Tailwind CSS, including custom animations",
-      "- Implemented responsive layouts to ensure smooth user experience across all screen sizes"
+      "- Dynamic portfolio written in TypeScript using Next.js framework and deployed with Vercel",
+      "- Implemented responsive layouts to ensure smooth user experience across all screen sizes",
+      "- Styled interactive UI components with Tailwind CSS, incorporating custom animations"
     ],
   },
   {
     date: 'June 2024',
-    title: 'AI Chat Bot',
+    title: 'AI Assistant Web App',
     skill: 'HTML, CSS',
     desc: 'Full-stack Chatbot Powered by GPT-4',
     detail: [
       "- Full-stack web application hosting GPT-4's conversational and image analysis features via Azure OpenAI Service",
-      "- Structured the UI with HTML and CSS for a clean minimalistic look",
-      "- Fine-tuned prompts of the AI model for optimized output formatting"
+      "- Optimized AI prompts for improved output accuracy and formatting",
+      "- Developed a minimalistic UI with HTML and CSS, ensuring a clean, user-friendly design"
     ],
   },
   {
     date: 'April 2024',
-    title: 'Medieval City Builder',
-    skill: 'Java, JUnit',
-    desc: 'City Builder Game',
+    title: 'Medieval Sandbox Builder',
+    skill: 'Java',
+    desc: 'Sandbox-style Building Game',
     detail: [
-      "- City builder game developed in Java using JFrame and OOP",
-      "- Created a intuitive GUI using JFrame and JPanel with an interactive menu tab accessible through mouse inputs",
-      "- Implemented log outputs and game save functionality using Json",
-      "- Tested game functionality through the use of JUnit"
+      "- Sandbox-style building game developed in Java with a mouse-controlled GUI",
+      "- Implemented JSON-based save/load functionality and logging for debugging",
+      "- Performed testing with JUnit to validate core game interactions"
     ],
   },
   {
@@ -45,8 +44,8 @@ const projects = [
     desc: 'Roguelike Puzzle Game',
     detail: [
       "- Roguelike puzzle game developed in Python using Pygame",
-      "- Implemented a character with four movement directions, controllable using keyboard inputs",
-      "- Created timed obstacles and interactive pickups"
+      "- Developed character movement mechanics with four directions controlled via keyboard inputs",
+      "- Implemented dynamic obstacles and collectible items"
     ],
   },
 ];
