@@ -44,7 +44,7 @@ const projects = [
     desc: 'Roguelike Puzzle Game',
     detail: [
       "- Roguelike puzzle game developed in Python using Pygame",
-      "- Developed character movement mechanics with four directions controlled via keyboard inputs",
+      "- Developed four-directional character movement mechanics controlled via keyboard inputs",
       "- Implemented dynamic obstacles and collectible items"
     ],
   },

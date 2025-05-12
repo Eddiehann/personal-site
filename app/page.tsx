@@ -26,7 +26,7 @@ export default function Home() {
 
       <div className="grid gap-6 fade-up font-normal">
         <section>
-          Hey! I&apos;m Eddie, a second-year computer science student at UBC.
+          Hey! I&apos;m Eddie, a third-year computer science student at UBC.
         </section>
 
         <section>
