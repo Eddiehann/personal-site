@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useState } from 'react';
+import Image from "next/image";
 
 const projects = [
   {
@@ -14,6 +15,7 @@ const projects = [
       "- Implemented responsive layouts to ensure smooth user experience across all screen sizes",
       "- Styled interactive UI components with Tailwind CSS, incorporating custom animations"
     ],
+    link: 'https://github.com/Eddiehann/personal-site'
   },
   {
     date: 'June 2024',
@@ -25,6 +27,7 @@ const projects = [
       "- Optimized AI prompts for improved output accuracy and formatting",
       "- Developed a minimalistic UI with HTML and CSS, ensuring a clean, user-friendly design"
     ],
+    link: 'https://github.com/Eddiehann/ai-assistant'
   },
   {
     date: 'April 2024',
@@ -36,6 +39,7 @@ const projects = [
       "- Implemented JSON-based save/load functionality and logging for debugging",
       "- Performed testing with JUnit to validate core game interactions"
     ],
+    link: 'https://github.com/Eddiehann/sandbox'
   },
   {
     date: 'June 2022',
@@ -47,6 +51,7 @@ const projects = [
       "- Developed four-directional character movement mechanics controlled via keyboard inputs",
       "- Implemented dynamic obstacles and collectible items"
     ],
+    link: 'https://github.com/Eddiehann/gift-rush'
   },
 ];
 
@@ -73,7 +78,30 @@ export default function ProjectList() {
           className={sectionLayout} 
           onClick={() => setDropDown(dropDown === i ? -1 : i)}> {/* set to -1 if already open */}
 
-          <div className="font-normal text-sm">{project.date}</div>
+          <div className="flex justify-between w-full">
+            <div className="font-normal text-sm">{project.date}</div>
+            { dropDown === i && (
+              <a
+                className="flex gap-2 text-sm
+                  transition ease-in-out fade-right duration-200
+                  text-gray-400 hover:text-gray-300"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="">
+                  Source
+                </div>
+                <Image
+                  src="/external.svg"
+                  alt="external icon"
+                  width={16}
+                  height={16}
+                />
+              </a>
+            )}
+          </div>
+
           <div>
             <span className="font-semibold text-gray-300">{project.title}</span>
             <span className="font-normal"> | {project.skill}</span>
@@ -84,7 +112,7 @@ export default function ProjectList() {
             <div className="font-normal text-gray-300 text-sm pt-2 transition ease-in-out fade-up">
               {project.detail.map((point, j) => (
                 <section key={j} className="py-1">{point}</section>
-            ))}
+              ))}
             </div>
           )}
         </section>

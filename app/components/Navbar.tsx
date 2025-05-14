@@ -68,7 +68,7 @@ export default function Navbar() {
         </div>
         
         {hiddenButton && (
-          <div className="flex gap-2 transition ease-in-out fade-righ">
+          <div className="flex gap-2 transition ease-in-out fade-right">
             <input 
               type="password" 
               id="password" 
