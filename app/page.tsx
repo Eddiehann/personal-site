@@ -10,18 +10,18 @@ export default function Home() {
     <div className="grid gap-6 py-2">
       <section className="flex font-semibold text-gray-100
                       text-3xl sm:text-4xl sm:py-2">
-          <div className="transition transform duration-200 text-wave">
-            <span>E</span>
-            <span>d</span>
-            <span>d</span>
-            <span>i</span>
-            <span>e</span>
-            <span> </span>
-            <span>H</span>
-            <span>a</span>
-            <span>n</span>
-          </div>
-        <div className = "block rounded-lg animate-pulse pl-1 ml-2 bg-gray-500 h-10"></div>
+        <div className="transition transform duration-200 text-wave">
+          <span>E</span>
+          <span>d</span>
+          <span>d</span>
+          <span>i</span>
+          <span>e</span>
+          <span> </span>
+          <span>H</span>
+          <span>a</span>
+          <span>n</span>
+        </div>
+        <div className = "animate-blink pl-1 text-gray-400 font-normal">_</div>
       </section>
 
       <div className="grid gap-6 fade-up font-normal">

@@ -65,6 +65,20 @@ body {
   }
 }
 
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* blink animation */
+.animate-blink {
+  animation: blink 1.2s infinite steps(1, start);
+}
+
 /* fade down animation */
 .fade-down nav {
   animation: down 0.5s ease-in-out forwards;
