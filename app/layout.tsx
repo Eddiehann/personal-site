@@ -2,6 +2,8 @@ import './globals.css'
 import React, { ReactNode } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { Analytics } from "@vercel/analytics/next"
+
 
 export const metadata = {
   title: 'Eddie Han',
@@ -28,6 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 row-start-2 max-w-screen-sm w-full mx-auto 
                 transition ease-in-out fade-up text-gray-400">
                   {children}
+                  <Analytics />
               </main>
 
               <footer className="
