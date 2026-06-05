@@ -4,10 +4,15 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Analytics } from "@vercel/analytics/next"
 
-
 export const metadata = {
   title: 'Eddie Han',
   description: '',
+  icons: {
+    icon: [
+      { url: 'icons/favicon-dark.png', media: '(prefers-color-scheme: light)' },
+      { url: 'icons/favicon-light.png', media: '(prefers-color-scheme: dark)' },
+    ],
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
