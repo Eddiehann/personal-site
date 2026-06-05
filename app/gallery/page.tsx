@@ -5,20 +5,20 @@ import Image from "next/image";
 import { useState } from 'react';
 
 const images = [
-  {src: '/art/landscape.png', alignment: ''},
-  {src: '/art/mockup.png', alignment: ''},
-  {src: '/art/steven.png', alignment: ''},
-  {src: '/art/eagle.gif', alignment: ''},
-  {src: '/art/PAD.png', alignment: ''},
-  {src: '/art/tree.png', alignment: ''},
-  {src: '/art/village.png', alignment: 'object-top'},
-  {src: '/art/terraria.png', alignment: ''},
+  { src: '/art/landscape.png', alignment: '' },
+  { src: '/art/mockup.png', alignment: '' },
+  { src: '/art/steven.png', alignment: '' },
+  { src: '/art/eagle.gif', alignment: '' },
+  { src: '/art/PAD.png', alignment: '' },
+  { src: '/art/tree.png', alignment: '' },
+  { src: '/art/village.png', alignment: 'object-top' },
+  { src: '/art/terraria.png', alignment: '' },
 ]
 
 
 export default function Gallery() {
 
-  const [selectedImg, setSelectedImg] = useState(-1); {/* -1 is none */}
+  const [selectedImg, setSelectedImg] = useState(-1); // -1 is none
 
   return (
     <div className="grid gap-4 py-2 font-normal">
@@ -26,24 +26,24 @@ export default function Gallery() {
       <section className="font-semibold text-gray-100 text-2xl sm:text-3xl sm:py-2">
         Gallery
       </section>
-      
+
       <div className="grid gap-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
           {images.map((image, i) => (
 
-            <section 
-              key={i} 
+            <section
+              key={i}
               className="relative aspect-square overflow-hidden"
               onClick={() => setSelectedImg(i)}>
-              
+
               <Image
-                  src={image.src}
-                  alt="image"
-                  fill
-                  unoptimized
-                  className={`${"object-cover image-pixel"} ${image.alignment}`}
-                />
+                src={image.src}
+                alt="image"
+                fill
+                unoptimized
+                className={`${"object-cover image-pixel"} ${image.alignment}`}
+              />
             </section>
           ))}
         </div>
@@ -63,8 +63,8 @@ export default function Gallery() {
               className="object-contain"
             />
           </div>
-        </div> 
+        </div>
       )}
-    </div> 
+    </div>
   )
 }

@@ -12,7 +12,7 @@ export default function Hidden() {
       <section className="font-semibold text-gray-100 text-2xl sm:text-3xl sm:py-2">
         Hi baby!
       </section>
-      
+
       <section className="relative w-70 h-70 overflow-hidden">
         <Image
           src="/hidden.gif"
@@ -20,7 +20,7 @@ export default function Hidden() {
           fill
           className="object-cover"
         />
-      </section> 
+      </section>
     </div>
   )
 }

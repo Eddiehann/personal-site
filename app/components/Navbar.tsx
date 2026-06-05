@@ -17,11 +17,11 @@ export default function Navbar() {
     transition duration-200 ease-in-out
     hover:text-gray-100 hover:-translate-y-1`;
 
-  const isActive = (path: string) => 
+  const isActive = (path: string) =>
     pathname === path ? "underline underline-offset-5 text-gray-300" : "no-underline";
 
-  const [hiddenButton, setHiddenButton] = useState(false); {/* -1 is not clicked */}
-  const [password, setPassword] = useState(''); {/* default to empty */}
+  const [hiddenButton, setHiddenButton] = useState(false); // -1 is not clicked 
+  const [password, setPassword] = useState(''); // default to empty
   const router = useRouter();
   const correctPassword = 'rachel';
 
@@ -33,10 +33,10 @@ export default function Navbar() {
     }
   };
 
-  return ( 
+  return (
     <nav className="flex justify-between w-full h-10">
-      
-      <div className = "flex gap-6">  
+
+      <div className="flex gap-6">
         <Link
           href="/"
           className={navBarLayout}>
@@ -52,8 +52,8 @@ export default function Navbar() {
           </svg>
         </Link>
 
-        <div 
-          className={`${navBarLayout} hidden sm:block`} 
+        <div
+          className={`${navBarLayout} hidden sm:block`}
           onClick={() => setHiddenButton(hiddenButton ? false : true)}>
           <svg height="18" width="18" viewBox="0 0 16 16" className={`${textLayout} ${hiddenButton ? '' : 'text-transparent'}`}>
             <path d="M6.5 5.5C6.5 3.29086 8.29086 1.5 10.5 1.5C12.7091 1.5 14.5 3.29086 14.5 5.5C14.5 7.70914 
@@ -66,24 +66,24 @@ export default function Navbar() {
             6.5 10.5 6.5Z" fill="currentColor"></path>
           </svg>
         </div>
-        
+
         {hiddenButton && (
           <div className="flex gap-2 transition ease-in-out fade-right">
-            <input 
-              type="password" 
-              id="password" 
+            <input
+              type="password"
+              id="password"
               value={password}
               className="text-sm rounded-lg w-30 p-3 h-10
                 bg-gray-800 placeholder-gray-400
-                focus:outline-none hidden sm:block" 
+                focus:outline-none hidden sm:block"
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
-              onKeyDown={handleKeyDown}/>
+              onKeyDown={handleKeyDown} />
           </div>
         )}
       </div>
 
-      <div className = "flex gap-6">  
+      <div className="flex gap-6">
         <Link
           href="/projects"
           className={`${navBarLayout} ${isActive("/projects")}`}>
@@ -113,7 +113,7 @@ export default function Navbar() {
           href="https://github.com/eddiehann"
           target="_blank"
           rel="noopener noreferrer"
-          >
+        >
           <svg height="18" width="18" viewBox="0 0 16 16" className={textLayout}>
             <path d="M8 0C3.58 0 0 3.57879 0 7.99729C0 11.5361 2.29 14.5251 5.47 15.5847C5.87 15.6547 6.02 15.4148 6.02 
             15.2049C6.02 15.0149 6.01 14.3851 6.01 13.7154C4 14.0852 3.48 13.2255 3.32 12.7757C3.23 12.5458 2.84 11.836 
@@ -133,17 +133,17 @@ export default function Navbar() {
           href="https://www.linkedin.com/in/eddiehann/"
           target="_blank"
           rel="noopener noreferrer"
-          >
+        >
           <svg height="18" width="18" viewBox="0 0 16 16" className={textLayout}>
             <path d="M2 0C0.895431 0 0 0.895431 0 2V14C0 15.1046 0.895431 16 2 16H14C15.1046 16 16 15.1046 16 14V2C16 
             0.895431 15.1046 0 14 0H2ZM5 6.75V13H3V6.75H5ZM5 4.50008C5 5.05554 4.61409 5.5 3.99408 5.5H3.98249C3.38582 
             5.5 3 5.05554 3 4.50008C3 3.93213 3.39765 3.5 4.00584 3.5C4.61409 3.5 4.98845 3.93213 5 4.50008ZM8.5 
             13H6.5C6.5 13 6.53178 7.43224 6.50007 6.75H8.5V7.78371C8.5 7.78371 9 6.75 10.5 6.75C12 6.75 13 7.59782 13 
-            9.83107V13H11V10.1103C11 10.1103 11 8.46616 9.7361 8.46616C8.4722 8.46616 8.5 9.93972 8.5 9.93972V13Z" 
-            fill="currentColor"></path>
+            9.83107V13H11V10.1103C11 10.1103 11 8.46616 9.7361 8.46616C8.4722 8.46616 8.5 9.93972 8.5 9.93972V13Z"
+              fill="currentColor"></path>
           </svg>
         </a>
-      </div>  
+      </div>
     </nav>
   );
 };

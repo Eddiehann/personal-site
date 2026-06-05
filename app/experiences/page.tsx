@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Experiences() {
 
-  const sectionLayout=`
+  const sectionLayout = `
     grid gap-1 px-3
     border-l-2 border-gray-600
     transition ease-in-out duration-300`;
@@ -23,7 +23,7 @@ export default function Experiences() {
         <div className="py-2 text-gray-300">Applied prompt engineering to assess customer purchase intentions and identify product issues.
           Improved query output formatting to 80% accuracy using few-shot prompting.
           Designed a UI workflow and interactive dashboard in Figma,
-          adopted by Microsoft&apos;s front-end team for Volvo China&apos;s sales use.</div> 
+          adopted by Microsoft&apos;s front-end team for Volvo China&apos;s sales use.</div>
 
         <a
           className="flex gap-2 transition duration-200 ease-in-out 
@@ -43,9 +43,9 @@ export default function Experiences() {
           </div>
         </a>
 
-       
+
       </section>
 
-    </div> 
+    </div>
   )
 }

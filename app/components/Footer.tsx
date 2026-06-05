@@ -5,14 +5,14 @@ const Footer = () => {
   const FooterLayout = `
     flex items-center
     gap-2 h-10 pr-8 w-auto`;
-  
+
   const TextLayout = `
     transition duration-200 ease-in-out 
     hover:translate-x-1 hover:text-gray-300`;
-  
+
   return (
     <section className="flex justify-between w-full items-center pb-20 text-gray-400">
-      <div className="flex"> 
+      <div className="flex">
         <a
           className={FooterLayout}
           href="https://github.com/eddiehann"
